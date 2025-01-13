@@ -7,7 +7,7 @@ A = [1 0 -1 0;
      0 0  1 1];
 
 % Define a range of c values
-c_values = linspace(-10, 40, 1000);
+c_values = linspace(-5, 5, 100);
 num_c = length(c_values);
 
 % Preallocate arrays for singular values

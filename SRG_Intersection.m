@@ -1,4 +1,6 @@
 close all
+clear
+tic
 
 % Define the matrix L
 L = [1 0 -1 0; 
@@ -7,7 +9,7 @@ L = [1 0 -1 0;
      0 0  1 1];
 
 % Define the range of c values
-c_values = linspace(-20, 20, 5000); % Replace -10 and 10 with your desired range, 100 points
+c_values = linspace(-10, 10, 1000); % Replace -10 and 10 with your desired range, 100 points
 
 % Initialize arrays to store singular values
 min_singular_values = zeros(size(c_values));
@@ -66,7 +68,7 @@ fill(fill_x, -fill_y, [0.8, 0.8, 1], 'EdgeColor', 'none'); % Light blue fill
 
 % Customize the plot
 title('Scaled Relative Graph');
-xlim([-5,5]);
-ylim([-5,5]);
+axis equal;
 grid on;
 hold off;
+toc
